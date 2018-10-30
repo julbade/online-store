@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>{{albumToDisplay.tite}}</h3>
-  <h3>{{albumToDisplay.artist}}</h3>
-  <p>{{albumToDisplay.description}}</p>
+  <h3>{{(albumToDisplay | async)?.title}}</h3>
+  <h3>{{(albumToDisplay | async)?.artist}}</h3>
+  <p>{{(albumToDisplay | async)?.description}}</p>
 </div>

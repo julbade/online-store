@@ -14,8 +14,8 @@ export class MarketplaceComponent implements OnInit {
     constructor(private router: Router, private albumService: AlbumService) { }
 
   albums: FirebaseListObservable<any[]>;
-  goToDetailPage(clickedAlbum: Album) {
-    // this.router.navigate(['albums', clickedAlbum.id]);
+  goToDetailPage(clickedAlbum) {
+    this.router.navigate(['albums', clickedAlbum.$key]);
   }
   
   ngOnInit() {
